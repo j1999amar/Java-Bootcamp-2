@@ -8,6 +8,7 @@ public class MenuDriven {
         System.out.println(" 1. Largest Number ");
         System.out.println(" 2. Smallest Number ");
         System.out.println(" 3. Prime or Not Prime");
+        System.out.println(" 4. Even or Not");
         int menu=scanner.nextInt();
         switch (menu){
             case 1:
@@ -16,6 +17,8 @@ public class MenuDriven {
                 smallestNumber();
             case 3:
                 primeOrNot();
+            case 4:
+                evenOrNot();
         }
 
     }
@@ -68,6 +71,15 @@ public class MenuDriven {
         }else {
             System.out.println(primeOrNotNUmber+" is not a prime number");
 
+        }
+    }
+    void evenOrNot(){
+        System.out.println("Enter the number to check even or not");
+        int evenOrNotNumber=scanner.nextInt();
+        if(evenOrNotNumber%2==0) {
+            System.out.println(evenOrNotNumber + " is a even number");
+        }else{
+            System.out.println(evenOrNotNumber + " is not even number");
         }
     }
 
