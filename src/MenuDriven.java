@@ -7,13 +7,15 @@ public class MenuDriven {
         System.out.println("Menu");
         System.out.println(" 1. Largest Number ");
         System.out.println(" 2. Smallest Number ");
-
+        System.out.println(" 3. Prime or Not Prime");
         int menu=scanner.nextInt();
         switch (menu){
             case 1:
                 largestNumber();
             case 2:
                 smallestNumber();
+            case 3:
+                primeOrNot();
         }
 
     }
@@ -46,6 +48,25 @@ public class MenuDriven {
             System.out.println("Smallest Number is "+number2);
         }else if(number3<number2&&number3<number1){
             System.out.println("Smallest Number is "+number3);
+        }
+    }
+    void primeOrNot(){
+        System.out.println("Enter the number to check the number is prime or not");
+        int primeOrNotNUmber=scanner.nextInt();
+        int count = 0;
+
+        for(int i=2;i<primeOrNotNUmber;i++){
+            if(primeOrNotNUmber/i==0){
+                count=1;
+            }else{
+                count=0;
+            }
+        }
+        if(count==1){
+            System.out.println(primeOrNotNUmber+" is not a prime number");
+        }else {
+            System.out.println(primeOrNotNUmber+" is prime number");
+
         }
     }
 
