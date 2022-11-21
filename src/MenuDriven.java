@@ -11,26 +11,36 @@ public class MenuDriven {
         System.out.println(" 4. Even or Not");
         System.out.println(" 5. Resverse Number");
         System.out.println(" 6. Exit");
-
         int menu=scanner.nextInt();
+        menuActoin(menu);
+    }
+    void menuActoin(int menu){
+
         switch (menu){
             case 1:
                 largestNumber();
+                break;
             case 2:
                 smallestNumber();
+                break;
             case 3:
                 primeOrNot();
+                break;
             case 4:
                 evenOrNot();
+                break;
             case 5:
                 reverse();
+                break;
             case 6:
                 System.exit(0);
+            default:
+                System.out.println("Choice correct ");
         }
-
     }
 
     void largestNumber(){
+        System.out.println("Largest Number");
         System.out.println("Enter the first number");
         double number1=scanner.nextDouble();
         System.out.println("Enter the second number");
@@ -46,6 +56,7 @@ public class MenuDriven {
         }
     }
     void smallestNumber(){
+        System.out.println("Smallest Number");
         System.out.println("Enter the first number");
         double number1=scanner.nextDouble();
         System.out.println("Enter the second number");
@@ -61,6 +72,7 @@ public class MenuDriven {
         }
     }
     void primeOrNot(){
+        System.out.println("Prime Number or Not Prime Number");
         System.out.println("Enter the number to check the number is prime or not");
         int primeOrNotNUmber=scanner.nextInt();
         int count = 0;
@@ -81,6 +93,7 @@ public class MenuDriven {
         }
     }
     void evenOrNot(){
+        System.out.println("Even Number or Not Even Number");
         System.out.println("Enter the number to check even or not");
         int evenOrNotNumber=scanner.nextInt();
         if(evenOrNotNumber%2==0) {
@@ -93,22 +106,22 @@ public class MenuDriven {
         System.out.println("Resverse Number");
         int swapNumber = scanner.nextInt();
         int reverse;
-        for (int i = 0; i <; i++) {
             reverse = 0;
             for (; swapNumber != 0; swapNumber = swapNumber / 10) {
                 int remainder = swapNumber % 10;
                 reverse = reverse * 10 + remainder;
             }
+        System.out.println("The reverse of given number is " + reverse);
 
         }
-        System.out.println("The reverse of given number is " + reverse);
-    }
+
     public static void main(String[] args) {
         MenuDriven menuDriven=new MenuDriven();
         Scanner scanner=new Scanner(System.in);
-        while (1 > 0) {
+        while(1>0){
             menuDriven.menu();
         }
+
 
     }
 }
