@@ -56,16 +56,17 @@ public class MenuDriven {
         int count = 0;
 
         for(int i=2;i<primeOrNotNUmber;i++){
-            if(primeOrNotNUmber/i==0){
-                count=1;
-            }else{
-                count=0;
+            if(primeOrNotNUmber%i == 0)
+            {
+                count++;
+                break;
             }
         }
-        if(count==1){
-            System.out.println(primeOrNotNUmber+" is not a prime number");
-        }else {
+        if(count==0){
             System.out.println(primeOrNotNUmber+" is prime number");
+
+        }else {
+            System.out.println(primeOrNotNUmber+" is not a prime number");
 
         }
     }
