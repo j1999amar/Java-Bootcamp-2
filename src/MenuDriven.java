@@ -9,6 +9,7 @@ public class MenuDriven {
         System.out.println(" 2. Smallest Number ");
         System.out.println(" 3. Prime or Not Prime");
         System.out.println(" 4. Even or Not");
+        System.out.println(" 5. Resverse Number");
         int menu=scanner.nextInt();
         switch (menu){
             case 1:
@@ -19,6 +20,8 @@ public class MenuDriven {
                 primeOrNot();
             case 4:
                 evenOrNot();
+            case 5:
+                reverse();
         }
 
     }
@@ -82,7 +85,18 @@ public class MenuDriven {
             System.out.println(evenOrNotNumber + " is not even number");
         }
     }
+    void reverse(){
+        System.out.println("Resverse Number");
+        int swapNumber=scanner.nextInt();
+        int reverse=0;
+        for(int i=0;i<swapNumber;i++){
+            int temp=swapNumber%10;
+             reverse=reverse*10 + temp;
+            swapNumber=swapNumber/10;
 
+        }
+        System.out.println("The reverse of given number is "+reverse);
+    }
     public static void main(String[] args) {
         MenuDriven menuDriven=new MenuDriven();
         Scanner scanner=new Scanner(System.in);
