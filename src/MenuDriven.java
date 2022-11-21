@@ -10,6 +10,8 @@ public class MenuDriven {
         System.out.println(" 3. Prime or Not Prime");
         System.out.println(" 4. Even or Not");
         System.out.println(" 5. Resverse Number");
+        System.out.println(" 6. Exit");
+
         int menu=scanner.nextInt();
         switch (menu){
             case 1:
@@ -22,6 +24,8 @@ public class MenuDriven {
                 evenOrNot();
             case 5:
                 reverse();
+            case 6:
+                System.exit(0);
         }
 
     }
@@ -85,22 +89,26 @@ public class MenuDriven {
             System.out.println(evenOrNotNumber + " is not even number");
         }
     }
-    void reverse(){
+    void reverse() {
         System.out.println("Resverse Number");
-        int swapNumber=scanner.nextInt();
-        int reverse=0;
-        for(int i=0;i<swapNumber;i++){
-            int temp=swapNumber%10;
-             reverse=reverse*10 + temp;
-            swapNumber=swapNumber/10;
+        int swapNumber = scanner.nextInt();
+        int reverse;
+        for (int i = 0; i <; i++) {
+            reverse = 0;
+            for (; swapNumber != 0; swapNumber = swapNumber / 10) {
+                int remainder = swapNumber % 10;
+                reverse = reverse * 10 + remainder;
+            }
 
         }
-        System.out.println("The reverse of given number is "+reverse);
+        System.out.println("The reverse of given number is " + reverse);
     }
     public static void main(String[] args) {
         MenuDriven menuDriven=new MenuDriven();
         Scanner scanner=new Scanner(System.in);
-        menuDriven.menu();
+        while (1 > 0) {
+            menuDriven.menu();
+        }
 
     }
 }
